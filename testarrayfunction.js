@@ -1,7 +1,4 @@
 const fs = require('fs');
-let test1 = [1, 2, 3, 4, 5];
-let test2 = [2, 3, 4, 5, 2];
-
 
 function analyzeFriendList(loc) {
     fs.readFile(loc, (err, data) => {
