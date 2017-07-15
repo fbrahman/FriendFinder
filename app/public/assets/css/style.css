@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -40,12 +41,51 @@ h6 {
 
 .topMenu {
     background: #2d3e50;
+    display: flex;
+    padding: 1em;
+}
+
+.topMenu-title {
+    flex: 5;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+}
+
+.topMenu-list {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.topMenu-option {
+    font-size: 1em;
+    padding: .5em;
+}
+
+.topMenu-option a:link {
+    text-decoration: none;
+    color: #6FBEF3;
+    white-space: nowrap;
+}
+
+.topMenu-option a:visited {
+    color: #6FBEF3;
+}
+
+.topMenu-option a:hover,
+.topMenu-option a:focus {
+    color: #AECFE5;
 }
 
 .mainSection {
     /*allows the main section to take up all available space pushing footer to the bottom*/
     flex: 1;
-    background: #1f8dd6;
+    background: #0677d8;
+    /*#1f8dd6;*/
+    display: flex;
 }
 
 .splash-container {
@@ -54,7 +94,7 @@ h6 {
 }
 
 .splash-heading {
-    font-size: 20px;
+    font-size: 2.5em;
     font-weight: bold;
     color: white;
     border: 3px solid white;
@@ -62,17 +102,45 @@ h6 {
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
+    text-transform: uppercase;
 }
 
 .splash-subHeading {
     color: white;
     letter-spacing: 0.05em;
-    opacity: 0.8;
+    padding: 1.5em;
+    opacity: .8;
+    text-transform: lowercase;
+}
+
+.startbtn {
+    background-color: white;
+    border: none;
+    color: #0677d8;
+    padding: 0.5em 2em;
+    border-radius: 7px;
+    text-transform: uppercase;
+    font-size: 1.25em;
+}
+
+.startbtn:hover {
+    background-color: #E6E6E6;
+    color: #0677d8;
+}
+
+
+#startLink:link{
+   text-decoration: none; 
+}
+
+#startLink:visited{
+    color: #0677d8;
 }
 
 #copyright {
     background: #111;
-    color: white;
+    color: #7f8c8d;
+    font-size: .9em;
     text-align: center;
     padding: .5% 0 .5% 0;
 }

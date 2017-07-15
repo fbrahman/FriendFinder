@@ -5,15 +5,16 @@
     <title>Find &ndash; a &ndash; Friend</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="topMenu">
-            <div class="topMenu Title">Friend Finder</div>
-            <ul class = "topMenu List">
-                <li class="topMenu Option"><a href="#">API FriendList</a></li>
-                <li class="topMenu Option"><a href="#">Github Repo</a></li>
+            <div class="topMenu-title">Friend Finder</div>
+            <ul class="topMenu-list">
+                <li class="topMenu-option"><a href="/apiFriendList" id="friendList">API FriendList</a></li>
+                <li class="topMenu-option"><a href="https://github.com/fbrahman/FriendFinder" id="GitRepo">Github Repo</a></li>
             </ul>
         </div>
     </header>
@@ -23,7 +24,7 @@
             <p class="splash-subHeading">
                 Our 5 &ndash; minute survey will find your next best friend!
             </p>
-            <div class="button">Get Started</div>
+            <a href="/survey" id="startLink"><button type ="button" class="startbtn">Get Started</button></a>
         </div>
     </section>
     <footer>
