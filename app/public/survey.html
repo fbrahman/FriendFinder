@@ -198,11 +198,11 @@
             }
 
             $.post('/newperson', personObj, function(data){
+                console.log(data);
                 console.log("data Added")
 
                 // after person is added do a get for matched person
-
-                $.get('/result')
+                // $.get('/result')
             });
             
         })
