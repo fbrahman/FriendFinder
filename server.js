@@ -26,12 +26,11 @@ app.get('/survey', (req, res) => {
     res.sendFile(path.join(__dirname, 'app/public/survey.html'))
 })
 
-app.post('/newperson', (req, res) => {
+app.post('/newperson', function(req, res) {
     let newPerson = req.body;
-    // let friendsArray = [];
-    res.status(200).send(true)
+    let text = "text";
 
-    fs.readFile(path.join(__dirname, 'friends.json'), (err, data) => {
+    fs.readFile(path.join(__dirname, 'friends.json'), function(err, data) {
         if (err) throw err;
 
         let friendArray = JSON.parse(data);
@@ -40,34 +39,32 @@ app.post('/newperson', (req, res) => {
 
         fs.writeFile(path.join(__dirname, 'friends.json'), JSON.stringify(friendArray, null, 2), 'utf-8', (err) => {
             if (err) throw err;
-            console.log("file updated!");
 
-            analyzeFriendList (path.join(__dirname, 'friends.json'));
+            console.log("file updated!");
         })
+
+        let match = analyzeFriendList(friendArray);
+        res.status(200).send(match);
     })
 })
 
-function analyzeFriendList(loc) {
-    fs.readFile(loc, (err, data) => {
-        if (err) throw err;
+function analyzeFriendList(array) {
+    let match = {};
+    let friendsList = array;
+    let arrayLength = friendsList.length
+    let currLowScore = 100;
 
-        let friendsList = JSON.parse(data);
-        let arrayLength = friendsList.length
-        let currLowScore = 100;
-        let match = {};
-
-        for (let i = 0; i < arrayLength - 1; i++) {
-            let totalDifference = arrayDifference(friendsList[i].scores, friendsList[arrayLength - 1].scores);
-            if (totalDifference < currLowScore){
-                currLowScore = totalDifference;
-                match = {
-                    name: friendsList[i].name,
-                    photo: friendsList[i].photo
-                }
+    for (let i = 0; i < arrayLength - 1; i++) {
+        let totalDifference = arrayDifference(friendsList[i].scores, friendsList[arrayLength - 1].scores);
+        if (totalDifference < currLowScore) {
+            currLowScore = totalDifference;
+            match = {
+                name: friendsList[i].name,
+                photo: friendsList[i].photo
             }
         }
-        return match;
-    })
+    }
+    return (match);
 }
 
 function arrayDifference(array1, array2) {
