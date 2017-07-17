@@ -181,9 +181,10 @@
         <div>   <a href="#close" title="Close" class="close">X</a>
 
                 <h2>We've found your new best friend!</h2>
-
-            <p>This is a sample modal box that can be created using the powers of CSS3.</p>
-            <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+                
+                <img src="" id="matchPic"> <span id="matchName"></span>
+            
+           
         </div>
     </div>
 
@@ -213,9 +214,16 @@
             $.post('/newperson', personObj, function(data){
                 console.log(data);
                 console.log("data Added")
-                
-                // after person is added do a get for matched person
-                // $.get('/result')
+
+                $('#matchPic').attr("src", data.photo);
+                $('#matchName').text(data.name);
+
+                $('.modalDialog').css({'opacity':1, 'pointer-events':"auto"});
+
+                $('.close').off().click(function(){
+                    $('.modalDialog').css({'opacity':0, 'pointer-events':"none"});
+                })
+
             });
             
         })
