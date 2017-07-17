@@ -4,19 +4,14 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-let PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
-app.use(bodyParser.json({
-    type: "application/vnd.api+json"
-}));
+app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
 app.use(express.static(path.join(__dirname, 'app/public')))
-
 
 app.get('/apiFriendList', (req, res) => {
     res.sendFile(path.join(__dirname, 'friends.json'));
