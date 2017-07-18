@@ -94,5 +94,37 @@
       "4",
       "5"
     ]
+  },
+  {
+    "name": "Dude",
+    "photo": "http://i2.cdn.cnn.com/cnnnext/dam/assets/161212150454-best-cars-2016-jaguar-1-exlarge-169.jpg",
+    "scores": [
+      "2",
+      "4",
+      "3",
+      "1",
+      "1",
+      "1",
+      "5",
+      "3",
+      "4",
+      "2"
+    ]
+  },
+  {
+    "name": "No Name",
+    "photo": "No picture provided",
+    "scores": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
   }
 ]
