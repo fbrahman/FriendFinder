@@ -34,28 +34,9 @@ h6 {
 
 .grid-container {
     display: grid;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: 
-    	"heading" 
-    	"subheading" 
-    	"survey" 
-    	"navigation" 
-    	"footer";
+    grid-template-rows:auto;
+    grid-template-areas:auto;
     justify-items:center;
-}
-
-img {
-	max-height: 100%;
-	max-width: 100%;
-}
-
-#image {
-    grid-area: image;
-    grid-row: heading / footer;
-    grid-column:1;
-    background-color: black;
- 	z-index: -1;
- 	height: 100;
 }
 
 #navigation {
@@ -73,8 +54,8 @@ img {
 }
 
 #navigation li:nth-child(2){
-	padding-right: 1em;
-	padding-left: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
 #navigation li a:link,
@@ -85,7 +66,7 @@ img {
 }
 
 #navigation li a:hover{
-	color:grey;
+    color:grey;
 }
 
 #splash-heading {
@@ -97,19 +78,10 @@ img {
     background-color: rgba(0,0,0,.7);
 }
 
-#splash-subheading {
-    grid-area: subheading;
-    background-color: blue;
-    background-color: rgba(0,0,0,.7);
-    align-self: start;
-    font-size: 2.25em;
-    text-align: center;
-    padding: 1em; 
-    border-radius: 1em;
-}
 
-#survey-button {
-    grid-area: survey;
+
+#submission-button {
+    grid-area: submission;
     background-color: rgba(0,0,0,.7);
     align-self: start;
     font-size: 2em;
@@ -121,10 +93,10 @@ img {
     border-radius: 1em;
 }
 
-#survey-button:hover {
-	background-color: white;
-	color: black;
-	cursor: pointer;
+#submission-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }
 
 #footer {
@@ -134,6 +106,10 @@ img {
     font-size: 1.5em;
     text-align: center;
     white-space: nowrap;
+}
+
+#open-modal{
+    display: none;
 }
 
 @media only screen and (min-width: 1366px){
