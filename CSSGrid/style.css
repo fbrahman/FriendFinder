@@ -1,0 +1,136 @@
+html {
+    height: 100vh;
+}
+
+body {
+    min-height: 100vh;
+    color: white;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+h4 {
+    font-size: 1.12em;
+}
+
+h5 {
+    font-size: .83em;
+}
+
+h6 {
+    font-size: .75em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr auto auto;
+    grid-template-areas: 
+    	"heading" 
+    	"subheading" 
+    	"survey" 
+    	"navigation" 
+    	"footer";
+    justify-items:center;
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+#image {
+    grid-area: image;
+    grid-row: heading / footer;
+    grid-column:1;
+    background-color: black;
+ 	z-index: -1;
+ 	height: 100;
+}
+
+#navigation {
+    grid-area: navigation;
+    background-color: red;
+    background-color: rgba(0,0,0,.7);
+    font-size: 2.25em;
+    padding: .5em;
+    padding-bottom: 1em;
+}
+
+#navigation li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+#navigation li:nth-child(2){
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+#navigation li a:link,
+#navigation li a:active,
+#navigation li a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+#navigation li a:hover{
+	color:grey;
+}
+
+#splash-heading {
+    grid-area: heading;
+    align-self: center;
+    font-size: 5em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgba(0,0,0,.7);
+}
+
+#splash-subheading {
+    grid-area: subheading;
+    background-color: blue;
+    background-color: rgba(0,0,0,.7);
+    align-self: start;
+    font-size: 2.25em;
+    text-align: center;
+    padding: 1em; 
+    border-radius: 1em;
+}
+
+#survey-button {
+    grid-area: survey;
+    background-color: rgba(0,0,0,.7);
+    align-self: start;
+    font-size: 2em;
+    padding: 1em;
+    white-space: nowrap;
+    border-width: .2em;
+    border-style: solid;
+    border-color: white;
+    border-radius: 1em;
+}
+
+#survey-button:hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: black;
+    background-color: rgba(0,0,0,.7);
+    font-size: 1.5em;
+    text-align: center;
+    white-space: nowrap;
+}
