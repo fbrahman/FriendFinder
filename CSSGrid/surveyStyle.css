@@ -1,5 +1,6 @@
 html {
     height: 100vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -34,18 +35,31 @@ h6 {
 
 .grid-container {
     display: grid;
-    grid-template-rows:auto;
-    grid-template-areas:auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto 1fr;
+    grid-template-areas:
+    "heading navigation"
+    "name name"
+    "pic pic"
+    "survey survey"
+    "submission submission"
+    "footer footer";
     justify-items:center;
+}
+
+#splash-heading {
+    grid-area: heading;
+    justify-self: start;
+    font-size: 2em;
+    padding: .5em .5em .5em .5em;
 }
 
 #navigation {
     grid-area: navigation;
-    background-color: red;
-    background-color: rgba(0,0,0,.7);
-    font-size: 2.25em;
-    padding: .5em;
-    padding-bottom: 1em;
+    justify-self: center;
+    align-self: center;
+    font-size: 1em;
+    white-space: nowrap;
 }
 
 #navigation li {
@@ -69,28 +83,63 @@ h6 {
     color:grey;
 }
 
-#splash-heading {
-    grid-area: heading;
-    align-self: center;
-    font-size: 5em;
-    padding: 1em;
-    border-radius: 1em;
-    background-color: rgba(0,0,0,.7);
+#name{
+    grid-area:name;
+    padding: .75em;
+    font-size: 1.25em;
+    justify-self: start;
 }
 
+#pic{
+    grid-area:pic;
+    padding: .75em;
+    font-size: 1.25em;
+    justify-self: start;
+}
 
+#name label, 
+#pic label{
+    padding-right: 1em;
+}
+
+#nameFld, #picFld{
+    background-color: black;
+    border: 0;
+    border-bottom: 2px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    font-size: 1em;
+    opacity: .35;
+}
+
+#nameFld:focus,
+#picFld:focus {
+    opacity: 1;
+}
+
+#survey{
+    grid-area:survey;
+}
+
+.answer{
+    padding: .5em;
+}
+
+.likert li{
+    display: inline-block;
+}
 
 #submission-button {
     grid-area: submission;
-    background-color: rgba(0,0,0,.7);
     align-self: start;
-    font-size: 2em;
-    padding: 1em;
-    white-space: nowrap;
+    font-size: 1.25em;
+    padding: .75em;
     border-width: .2em;
     border-style: solid;
     border-color: white;
     border-radius: 1em;
+    margin:1em;
 }
 
 #submission-button:hover {
@@ -101,9 +150,8 @@ h6 {
 
 #footer {
     grid-area: footer;
-    background-color: black;
-    background-color: rgba(0,0,0,.7);
-    font-size: 1.5em;
+    align-self: end;
+    font-size: .75em;
     text-align: center;
     white-space: nowrap;
 }
@@ -114,20 +162,39 @@ h6 {
 
 @media only screen and (min-width: 1366px){
     .grid-container{
-        grid-template-columns:40% 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-columns:auto 1fr;
+        grid-template-rows: 1fr auto auto auto 1fr auto;
         grid-template-areas:
-        "image . navigation"
-        "image heading heading"
-        "image subheading subheading"
-        "image survey survey"
-        "image footer footer";
+        "heading ."
+        "navigation survey"
+        "name survey"
+        "pic survey"
+        ". submission"
+        "footer footer";
+    }
+
+    #splash-heading{
+        justify-self: center;
+        align-self: center;
     }
 
     #navigation{
         font-size: 1.25em;
         padding: 0;
-        align-self: end;
+        align-self: center;
+    }
+
+    #survey{
+        font-size: 1.25em;
+    }
+
+    .answer{
+        padding: 1em;
+    }
+
+    #name, #pic{
+        justify-self:start;
+        align-self:start;
     }
 
     #footer{
@@ -135,8 +202,4 @@ h6 {
         font-size: 1em;
         align-self: end;
     }
-/*
-    img {
-        height: 100%;
-    }*/
 }

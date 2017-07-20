@@ -5,6 +5,7 @@
     <title>Board Game Buddy - Survey</title>
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="surveyStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
@@ -19,11 +20,11 @@
             </li>
         </ul>
         <div id="splash-heading">
-            Board Game Buddies
+            B G B
         </div>
         <div id="name" class="personal-info">
             <label for="name">Name:</label>
-            <input type="text" name="name" id="nameFld">
+            <input type="text" name="name" id="nameFld" required>
         </div>
         <div id="pic" class="personal-info">
             <label for="picture">Picture URL:</label>
@@ -182,9 +183,7 @@
             <img src="" id="matchPic"> <span id="matchName"></span>
         </div>
     </div>
-    <script>
-    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 
 </html>
