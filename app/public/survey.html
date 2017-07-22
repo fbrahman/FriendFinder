@@ -2,194 +2,197 @@
 <html>
 
 <head>
-    <title>Find &ndash; a &ndash; Friend</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/styleSurvey.css">
+    <title>Board Game Buddy - Survey</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/surveyStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="topMenu">
-            <div class="topMenu-title">Friend Finder</div>
-            <ul class="topMenu-list">
-                <li class="topMenu-option"><a href="/apiFriendList" id="friendList">API FriendList</a></li>
-                <li class="topMenu-option"><a href="https://github.com/fbrahman/FriendFinder" id="GitRepo">Github Repo</a></li>
-            </ul>
+    <div class="grid-container">
+        <ul id="navigation">
+            <li>
+                <a href="/apiFriendList">Buddy List</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://github.com/fbrahman/FriendFinder">Github Repo</a>
+            </li>
+        </ul>
+        <div id="splash-heading">
+            <span class="b">B</span> <span class="g">G</span> <span class="b">B</span>
         </div>
-    </header>
-    <section class="mainSection">
-        <div class="personalInfo">
-            <div class="name"><label for="name">Name:</label><input type="text" name="name" id="nameFld"></div>
-            <div class="pic"><label for="picture">Picture URL:</label><input type="text" name="picture" id="picFld"></div>
+        <div id="name" class="personal-info">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="nameFld" required>
         </div>
-        <div class="survey">
+        <div id="pic" class="personal-info">
+            <label for="picture">Picture URL:</label>
+            <input type="text" name="picture" id="picFld">
+        </div>
+        <div id="instructions">
+            Answer the following questions about your preferences regarding the mechanics or type of board games, popular games exemplifying  Using your preferences we'll find your perfect board game buddy.
+        </div>
+        <div id="survey">
             <div class="questionBlock">
-                <div class="question">Question 1</div>
+                <div class="question">Q1: Set Collection (Monopoly Deal, Gin, etc.)</div>
                 <div class="answer">
                     <ul class="likert">
-                        <li>Strongly Disagree</li>
+                        <li>Strongly dislike</li>
                         <li><input type="radio" name="numAns1" value="1"></li>
                         <li><input type="radio" name="numAns1" value="2"></li>
                         <li><input type="radio" name="numAns1" value="3"></li>
                         <li><input type="radio" name="numAns1" value="4"></li>
                         <li><input type="radio" name="numAns1" value="5"></li>
-                        <li>Strongly Agree</li>
+                        <li>Strongly like</li>
                     </ul>
                 </div>
             </div>
             <div class="questionBlock">
-                <div class="question">Question 2</div>
+                <div class="question">Q2: Worker Placement (Agricola, Le Havre)</div>
                 <div class="answer">
                     <ul class="likert">
-                        <li>Strongly Disagree</li>
+                        <li>Strongly dislike</li>
                         <li><input type="radio" name="numAns2" value="1"></li>
                         <li><input type="radio" name="numAns2" value="2"></li>
                         <li><input type="radio" name="numAns2" value="3"></li>
                         <li><input type="radio" name="numAns2" value="4"></li>
                         <li><input type="radio" name="numAns2" value="5"></li>
-                        <li>Strongly Agree</li>
+                        <li>Strongly like</li>
                     </ul>
                 </div>
             </div>
             <div class="questionBlock">
-                <div class="question">Question 3</div>
+                <div class="question">Q3: Party Games (Taboo, Code Names, The Resistance)</div>
                 <div class="answer">
                     <ul class="likert">
-                        <li>Strongly Disagree</li>
+                        <li>Strongly dislike</li>
                         <li><input type="radio" name="numAns3" value="1"></li>
                         <li><input type="radio" name="numAns3" value="2"></li>
                         <li><input type="radio" name="numAns3" value="3"></li>
                         <li><input type="radio" name="numAns3" value="4"></li>
                         <li><input type="radio" name="numAns3" value="5"></li>
-                        <li>Strongly Agree</li>
+                        <li>Strongly like</li>
                     </ul>
                 </div>
             </div>
             <div class="questionBlock">
-                <div class="question">Question 4</div>
+                <div class="question">Q4: Story-telling (Dixit, Charades)</div>
                 <div class="answer">
                     <ul class="likert">
-                        <li>Strongly Disagree</li>
+                        <li>Strongly dislike</li>
                         <li><input type="radio" name="numAns4" value="1"></li>
                         <li><input type="radio" name="numAns4" value="2"></li>
                         <li><input type="radio" name="numAns4" value="3"></li>
                         <li><input type="radio" name="numAns4" value="4"></li>
                         <li><input type="radio" name="numAns4" value="5"></li>
-                        <li>Strongly Agree</li>
+                        <li>Strongly like</li>
                     </ul>
                 </div>
             </div>
             <div class="questionBlock">
-                <div class="question">Question 5</div>
+                <div class="question">Q5: Press your luck (Codenames, King of Tokyo, Pandemic, Ra)</div>
                 <div class="answer">
                     <ul class="likert">
-                        <li>Strongly Disagree</li>
+                        <li>Strongly dislike</li>
                         <li><input type="radio" name="numAns5" value="1"></li>
                         <li><input type="radio" name="numAns5" value="2"></li>
                         <li><input type="radio" name="numAns5" value="3"></li>
                         <li><input type="radio" name="numAns5" value="4"></li>
                         <li><input type="radio" name="numAns5" value="5"></li>
-                        <li>Strongly Agree</li>
+                        <li>Strongly like</li>
                     </ul>
                 </div>
             </div>
             <div class="questionBlock">
-                <div class="question">Question 6</div>
+                <div class="question">Q6: Co-op (Pandemic,  Arkham Horror) </div>
                 <div class="answer">
                     <ul class="likert">
-                        <li>Strongly Disagree</li>
+                        <li>Strongly dislike</li>
                         <li><input type="radio" name="numAns6" value="1"></li>
                         <li><input type="radio" name="numAns6" value="2"></li>
                         <li><input type="radio" name="numAns6" value="3"></li>
                         <li><input type="radio" name="numAns6" value="4"></li>
                         <li><input type="radio" name="numAns6" value="5"></li>
-                        <li>Strongly Agree</li>
+                        <li>Strongly like</li>
                     </ul>
                 </div>
             </div>
             <div class="questionBlock">
-                <div class="question">Question 7</div>
+                <div class="question">Q7: Collectible Card Games - CCGs (Magic, Netrunner, GoT) </div>
                 <div class="answer">
                     <ul class="likert">
-                        <li>Strongly Disagree</li>
+                        <li>Strongly dislike</li>
                         <li><input type="radio" name="numAns7" value="1"></li>
                         <li><input type="radio" name="numAns7" value="2"></li>
                         <li><input type="radio" name="numAns7" value="3"></li>
                         <li><input type="radio" name="numAns7" value="4"></li>
                         <li><input type="radio" name="numAns7" value="5"></li>
-                        <li>Strongly Agree</li>
+                        <li>Strongly like</li>
                     </ul>
                 </div>
             </div>
             <div class="questionBlock">
-                <div class="question">Question 8</div>
+                <div class="question">Q8: Childhood games (Monopoly, Pictionary, Parcheesi)</div>
                 <div class="answer">
                     <ul class="likert">
-                        <li>Strongly Disagree</li>
+                        <li>Strongly dislike</li>
                         <li><input type="radio" name="numAns8" value="1"></li>
                         <li><input type="radio" name="numAns8" value="2"></li>
                         <li><input type="radio" name="numAns8" value="3"></li>
                         <li><input type="radio" name="numAns8" value="4"></li>
                         <li><input type="radio" name="numAns8" value="5"></li>
-                        <li>Strongly Agree</li>
+                        <li>Strongly like</li>
                     </ul>
                 </div>
             </div>
             <div class="questionBlock">
-                <div class="question">Question 9</div>
+                <div class="question">Q9: Family (7wonders, Patchwork, Splendor)</div>
                 <div class="answer">
                     <ul class="likert">
-                        <li>Strongly Disagree</li>
+                        <li>Strongly dislike</li>
                         <li><input type="radio" name="numAns9" value="1"></li>
                         <li><input type="radio" name="numAns9" value="2"></li>
                         <li><input type="radio" name="numAns9" value="3"></li>
                         <li><input type="radio" name="numAns9" value="4"></li>
                         <li><input type="radio" name="numAns9" value="5"></li>
-                        <li>Strongly Agree</li>
+                        <li>Strongly like</li>
                     </ul>
                 </div>
             </div>
             <div class="questionBlock">
-                <div class="question">Question 10</div>
+                <div class="question">Q10: Video Games (You don't know Jack, Heads up)</div>
                 <div class="answer">
                     <ul class="likert">
-                        <li>Strongly Disagree</li>
+                        <li>Strongly dislike</li>
                         <li><input type="radio" name="numAns10" value="1"></li>
                         <li><input type="radio" name="numAns10" value="2"></li>
                         <li><input type="radio" name="numAns10" value="3"></li>
                         <li><input type="radio" name="numAns10" value="4"></li>
                         <li><input type="radio" name="numAns10" value="5"></li>
-                        <li>Strongly Agree</li>
+                        <li>Strongly like</li>
                     </ul>
                 </div>
             </div>
-            <div class="submission">
-                <button type ="button" class="submitbtn">Submit</button>
-            </div>
         </div>
-    </section>
-    <footer>
-        <div id="copyright">
-            &#169; Copyright 2017 Fahad Rahman
+        <div id="submission-button">
+            Submission
         </div>
-    </footer>
-    <div id="openModal" class="modalDialog">
-        <div>   <a href="#close" title="Close" class="close">X</a>
-
-                <h2>We've found your new best friend!</h2>
-                
-                <img src="" id="matchPic"> <span id="matchName"></span>
-            
-           
-        </div>
+        <div id="footer">&#169; Copyright 2017 Fahad Rahman</div>
     </div>
-
+    <div id="open-modal" class="modalDialog">
+        <div> <a href="/" title="Close" class="close">X</a>
+            <h2 id="modal-heading">We've found your Board Game Buddy!</h2>
+            <div id="matchInfo">            
+                <img src="" id="matchPic" alt="profile picutre">
+                <div id="matchName"></div></div>
+            </div>
+    </div>
     <!-- jQuery and JavaScript links -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        $('.submitbtn').off().click(function(){
+        $('#submission-button').off().click(function(){
             let name  = $('#nameFld').val().trim()||"No Name"
             let picURL = $('#picFld').val().trim()||"No picture provided"
             let numOfQuestions = $('.question').length
@@ -219,14 +222,13 @@
 
                 $('.close').off().click(function(){
                     $('.modalDialog').css({'opacity':0, 'pointer-events':"none"});
+
                 })
 
             });
             
         })
     </script>
-
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 
 </html>

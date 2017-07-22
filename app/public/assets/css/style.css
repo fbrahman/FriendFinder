@@ -1,13 +1,12 @@
 html {
-    height: 100%;
+    height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    /*flexbox for overall page children include header mainsection footer*/
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+    min-height: 100vh;
+    color: white;
+    background-color: black;
 }
 
 h1 {
@@ -34,114 +33,168 @@ h6 {
     font-size: .75em;
 }
 
-
-/*h1, h2, h3, h4, h5, h6{
-    color: #34495e;
-}*/
-
-.topMenu {
-    background: #2d3e50;
-    display: flex;
-    padding: 1em;
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    	"heading" 
+    	"subheading" 
+    	"survey" 
+    	"navigation" 
+    	"footer";
+    justify-items:center;
 }
 
-.topMenu-title {
-    flex: 5;
-    color: white;
-    text-transform: uppercase;
-    font-size: 1.25em;
-    display: flex;
-    align-items: center;
+img {
+	max-height: 100%;
+	max-width: 100%;
 }
 
-.topMenu-list {
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
+#image {
+    grid-area: image;
+    grid-row: 1 / 5;
+    grid-column:1;
+    background-color: black;
+ 	z-index: -1;
+ 	/*height: 100;*/
 }
 
-.topMenu-option {
-    font-size: 1em;
+#navigation {
+    grid-area: navigation;
+    background-color: red;
+    background-color: rgba(0,0,0,.7);
+    font-size: 2.25em;
     padding: .5em;
+    padding-bottom: 1em;
 }
 
-.topMenu-option a:link {
+#navigation li {
+    display: inline-block;
     text-decoration: none;
-    color: #6FBEF3;
-    white-space: nowrap;
 }
 
-.topMenu-option a:visited {
-    color: #6FBEF3;
+#navigation li:nth-child(2){
+	padding-right: 1em;
+	padding-left: 1em;
 }
 
-.topMenu-option a:hover,
-.topMenu-option a:focus {
-    color: #AECFE5;
+#navigation li a:link,
+#navigation li a:active,
+#navigation li a:visited{
+    text-decoration: none;
+    color: white;
 }
 
-.mainSection {
-    /*allows the main section to take up all available space pushing footer to the bottom*/
-    flex: 1;
-    background: #0677d8;
-    /*#1f8dd6;*/
-    display: flex;
+#navigation li a:hover{
+	color:grey;
 }
 
-.splash-container {
-    margin: auto;
+.b {
+    color: #33ccff;
+}
+
+.g {
+    color: #00ff99;
+}
+
+#splash-heading {
+    grid-area: heading;
+    align-self: center;
+    font-size: 5em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgba(0,0,0,.7);
+}
+
+.b {
+    color: #33ccff;
+}
+
+.g {
+    color: #00ff99;
+}
+
+#splash-subheading {
+    grid-area: subheading;
+    background-color: blue;
+    background-color: rgba(0,0,0,.7);
+    align-self: start;
+    font-size: 2.25em;
     text-align: center;
+    padding: 1em; 
+    border-radius: 1em;
 }
 
-.splash-heading {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: white;
-    border: 3px solid white;
-    padding: 1em 1.6em;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em;
-    text-transform: uppercase;
+#survey-button a:link,
+#survey-button a:visited
+{
+    text-decoration: none;
+    color:white;
 }
 
-.splash-subHeading {
-    color: white;
-    letter-spacing: 0.05em;
-    padding: 1.5em;
-    opacity: .8;
-    text-transform: lowercase;
+#survey-button a:link,
+#survey-button a:hover,
+#survey-button a:active {
+    color: black;
 }
 
-.startbtn {
+#survey-button:hover {
     background-color: white;
-    border: none;
-    color: #0677d8;
-    padding: 0.5em 2em;
-    border-radius: 7px;
-    text-transform: uppercase;
-    font-size: 1.25em;
-}
-
-.startbtn:hover {
-    background-color: #E6E6E6;
-    color: #0677d8;
+    color: black;
     cursor: pointer;
 }
 
-
-#startLink:link{
-   text-decoration: none; 
+#survey-button {
+    grid-area: survey;
+    background-color: rgba(0,0,0,.7);
+    align-self: start;
+    font-size: 2em;
+    padding: 1em;
+    white-space: nowrap;
+    border-width: .2em;
+    border-style: solid;
+    border-color: white;
+    border-radius: 1em;
 }
 
-#startLink:visited{
-    color: #0677d8;
-}
 
-#copyright {
-    background: #111;
-    color: #7f8c8d;
-    font-size: .9em;
+#footer {
+    grid-area: footer;
+    background-color: black;
+    background-color: rgba(0,0,0,.7);
+    font-size: 1.5em;
     text-align: center;
-    padding: .5% 0 .5% 0;
+    white-space: nowrap;
+    align-self: end;
+}
+
+@media only screen and (min-width: 1366px){
+    .grid-container{
+        grid-template-columns:40% 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "image . navigation"
+        "image heading heading"
+        "image subheading subheading"
+        "image survey survey"
+        "image footer footer";
+    }
+
+    #navigation{
+        font-size: 1.25em;
+        padding: 0;
+        align-self: end;
+    }
+
+    #splash-heading{
+        text-align: center;
+    }
+
+    #footer{
+        padding:0;
+        font-size: 1em;
+        align-self: end;
+    }
+
+ 
 }

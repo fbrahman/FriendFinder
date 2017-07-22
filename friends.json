@@ -112,19 +112,35 @@
     ]
   },
   {
-    "name": "No Name",
-    "photo": "No picture provided",
+    "name": "Fahad",
+    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAogAAAAJDM2YTEyMjJiLTg2NzQtNDlmOS1hMzc2LTgwNTM2OTllYjlhNQ.jpg",
     "scores": [
-      "0",
-      "0",
-      "0",
-      "0",
-      "0",
-      "0",
-      "0",
-      "0",
-      "0",
-      "0"
+      "4",
+      "3",
+      "5",
+      "5",
+      "5",
+      "3",
+      "2",
+      "2",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "name": "David Hollingsworth",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/%27David%27_by_Michelangelo_Fir_JBU013.jpg/220px-%27David%27_by_Michelangelo_Fir_JBU013.jpg",
+    "scores": [
+      "4",
+      "4",
+      "5",
+      "5",
+      "5",
+      "4",
+      "3",
+      "2",
+      "2",
+      "3"
     ]
   }
 ]

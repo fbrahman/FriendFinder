@@ -2,38 +2,34 @@
 <html>
 
 <head>
-    <title>Find &ndash; a &ndash; Friend</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Board Game Buddy</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <div class="topMenu">
-            <div class="topMenu-title">Friend Finder</div>
-            <ul class="topMenu-list">
-                <li class="topMenu-option"><a href="/apiFriendList" id="friendList">API FriendList</a></li>
-                <li class="topMenu-option"><a href="https://github.com/fbrahman/FriendFinder" id="GitRepo">Github Repo</a></li>
-            </ul>
-        </div>
-    </header>
-    <section class="mainSection">
-        <div class="splash-container">
-            <h1 class="splash-heading"> Looking for Friends ?!?!</h1>
-            <p class="splash-subHeading">
-                Our 5 &ndash; minute survey will find your next best friend!
-            </p>
-            <a href="/survey" id="startLink"><button type ="button" class="startbtn">Get Started</button></a>
-        </div>
-    </section>
-    <footer>
-        <div id="copyright">
-            &#169; Copyright 2017 Fahad Rahman
-        </div>
-    </footer>
-    <!-- jQuery and JavaScript links -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<body class="grid-container">
+
+    <div id="image"> <img src="./assets/images/boardgame.jpg" /> </div>
+    <ul id="navigation">
+        <li>
+            <a href="/apiFriendList">Buddy List</a>
+        </li>
+        <li>|</li>
+        <li>
+            <a href="https://github.com/fbrahman/FriendFinder">Github Repo</a>
+        </li>
+    </ul>
+    <div id="splash-heading">
+        <span class="b">B</span>oard <span class="g">G</span>ame <span class="b">B</span>uddy
+    </div>
+    <div id="splash-subheading">
+        Find your next board game buddy by taking this quick survey.
+    </div>
+    <div id="survey-button">
+        <h2><a href="/survey">Take the Survey !</a></h2></div>
+    <div id="footer">&#169; Copyright 2017 Fahad Rahman</div>
 </body>
+</script>
 
 </html>
