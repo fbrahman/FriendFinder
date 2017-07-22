@@ -41,6 +41,7 @@ h6 {
     "heading navigation"
     "name name"
     "pic pic"
+    "instructions instructions"
     "survey survey"
     "submission submission"
     "footer footer";
@@ -52,6 +53,14 @@ h6 {
     justify-self: start;
     font-size: 2em;
     padding: .5em .5em .5em .5em;
+}
+
+.b {
+    color: #33ccff;
+}
+
+.g {
+    color: #00ff99;
 }
 
 #navigation {
@@ -118,6 +127,14 @@ h6 {
     opacity: 1;
 }
 
+#instructions{
+    grid-area: instructions;
+    align-self: center;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 1em 1em 1em 1em;
+}
+
 #survey{
     grid-area:survey;
 }
@@ -162,40 +179,56 @@ h6 {
 
 @media only screen and (min-width: 1366px){
     .grid-container{
-        grid-template-columns:auto 1fr;
-        grid-template-rows: 1fr auto auto auto 1fr auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
         grid-template-areas:
-        "heading ."
+        "heading instructions"
         "navigation survey"
         "name survey"
         "pic survey"
-        ". submission"
+        "pic submission"
         "footer footer";
+
     }
 
     #splash-heading{
         justify-self: center;
         align-self: center;
+        font-size: 4em;
     }
 
     #navigation{
         font-size: 1.25em;
         padding: 0;
+        align-self: start;
+    }
+    
+    #instructions{
+        grid-area: instructions;
         align-self: center;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        padding: 1em 1em 0 0;
     }
 
     #survey{
-        font-size: 1.25em;
+        padding: 1em 2em 0 2em;
+        font-size: 1.2em;
+        align-self: center;
+        justify-self: center;
     }
 
     .answer{
-        padding: 1em;
+        padding: .5em 1em 1em 1em;
     }
 
     #name, #pic{
         justify-self:start;
         align-self:start;
+        padding: 0 0 0 3em;
     }
+
+
 
     #footer{
         padding:0;

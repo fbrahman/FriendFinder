@@ -89,6 +89,14 @@ img {
 	color:grey;
 }
 
+.b {
+    color: #33ccff;
+}
+
+.g {
+    color: #00ff99;
+}
+
 #splash-heading {
     grid-area: heading;
     align-self: center;
@@ -96,6 +104,14 @@ img {
     padding: 1em;
     border-radius: 1em;
     background-color: rgba(0,0,0,.7);
+}
+
+.b {
+    color: #33ccff;
+}
+
+.g {
+    color: #00ff99;
 }
 
 #splash-subheading {
